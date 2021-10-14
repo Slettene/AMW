@@ -1,0 +1,78 @@
+body{
+    font-family: 'Arial';
+    font-size: 12px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+a:hover{
+    color: #edb431;
+}
+ul{
+    list-style-type: none;
+}
+.navbar{
+    background: #edb431;
+    padding: 3rem 2rem;
+    height: 1rem;
+    min-height: 12vh;
+}
+
+.navbar-nav{
+    padding: 2rem 1.2rem;
+    font-size: 1.3rem;
+    border-top: 4px solid #b08600;
+    position: fixed;
+    left: 75%;
+}
+.nav-link-dropdown{
+    background-color: #11165a;
+    color: #ffffff;
+    border-radius: 12px;
+    display: inline-block;
+    float: left;
+}
+.nav-item:hover{
+    color: #585a6c;
+}
+.nav-link-logo{
+    color: #11165a;
+    position: fixed;
+    left: 70%;
+
+}
+.navbar-brand{
+    max-width: 100%;
+
+}
+
+.navbar-toggler{
+    background: #edb431;
+    border: black;
+    padding: 10px 6px;
+    outline: none;
+}
+.navbar-toggler span{
+    display: block;
+    width: 22px;
+    height: 2px;
+    border: 1px;
+    background: #11165a;
+}
+.navbar-toggler span + span{
+    margin-top: 4px;
+    width: 18px;
+    margin-left: 4px;
+}
+.navbar-toggler span + span + span{
+    width: 10px;
+    margin-left: 10px;
+}
