@@ -2,12 +2,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>AMV-Home</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+<div class="MyButtons">
+
+    <button>
+    </button>
+
+    <button>
+    </button>
+    <br>
+
+    <button>
+    </button>
+
+    <button>
+    </button>
+
+
+</div>
+
 </body>
 </html>
+
+<style>
+    .MyButtons button{
+        margin-top: 45vh;
+        margin-left: 45vw;
+        color: #008CBA;
+        padding: 2px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+</style>
