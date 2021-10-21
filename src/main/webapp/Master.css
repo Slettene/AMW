@@ -7,6 +7,7 @@ body{
     overflow-x: hidden;
     top: 0;
     left: 0;
+    background-color: #f0b324;
 
 
 }
@@ -16,13 +17,13 @@ a{
     font-weight: 500;
 }
 a:hover{
-    color: #edb431;
+    color: #f0b324;
 }
 ul{
     list-style-type: none;
 }
 .navbar{
-    background: #edb431;
+    background: #f0b324;
     padding: 3rem 2rem;
     height: 1rem;
     min-height: 12vh;
