@@ -14,7 +14,9 @@
     <nav class="navbar navbar-expand-lg header.nav fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
+                <a href="Home.html">
                 <img src="Bilder/Logo.png" height="74.01" width="136"/>
+            </a>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -39,7 +41,7 @@
                             <li><a class="dropdown-item" href="home.html">Hjem</a></li>
                             <li><a class="dropdown-item" href="Handlekurv.html">Handlekurv</a></li>
                             <li><a class="dropdown-item" href="Innstillinger.html">Innstillinger</a></li>
-                            <li><a class="dropdown-item" href="#">Levering</a></li>
+                            <li><a class="dropdown-item" href="Levering.html">Levering</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Logg ut</a></li>
                         </ul>
@@ -53,55 +55,77 @@
     </nav>
 </header>
 
-<div class="MyButtons">
-
-    <img src="Bilder/SpikerpistolPNG.png" height="100" width="160"/>
-    <button onclick="window.location.href='Spikerpistol.html'">Spikerpistol
-    </button>
-    <br>
-    <button onclick="window.location.href='Vedhogst.html'">Vedhogst
-    </button>
-    <button onclick="window.location.href='StørreUtstyr.html'">Større utstyr
-    </button>
-
+<div class="wrapper">
+    <div class="one">
+        <img class="bilder" src="Bilder/dummy-tilhenger.jpg"></div>
+    <div class="two">Tekst om utstyr</div>
+    <div class="three"><button class="booking">Sjekk Tilgjengelighet</button> </div>
+    <div class="four">Bilde av utsty</div>
+    <div class="five">Tekst om utstyr</div>
+    <div class="six"><button class="booking">Sjekk Tilgjengelighet</button></div>
 </div>
 
 </body>
 </html>
 
 <style>
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+        margin: 20px;
+    }
+    .one {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .two {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .three {
+        grid-column: 3;
+        grid-row: 3;
+    }
+    .four {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .five {
+        grid-column: 2;
+        grid-row: 5;
+    }
+    .six {
+        grid-column: 3;
+        grid-row: 5;
+    }
 
+    .bilder{
+        display: grid;
+        grid-area: image;
+        size: auto;
+        width: 50%;
+        height: 50%;
+    }
 
-    body {
+    .booking{
+        background-color: #008cba;
+        border: none;
+        color: white;
+        padding: 15px 32px;
         text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+
+    }
+
+    body{
         background-color: #f0b324;
-        margin-top: 50vh;
-
     }
 
-    .MyButtons {
-
-        margin-top: 20vh;
-        margin: auto;
-
-
-    }
-
-    .MyButtons button {
-
-        color: #181818;
-        background-color: #edb431;
-        font-size: 20px;
-        transition-duration: 0.4s;
-        height: 100px;
-        width: 400px;
-        border-radius: 50px;
-        border: solid #181818;
-    }
-
-    .MyButtons button:hover {
-        background-color: #ffffff;
-        color: rgb(237, 180, 49);
-    }
 
 </style>
