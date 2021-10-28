@@ -61,20 +61,37 @@
         </div>
     </nav>
 </header>
+<h1 class="headline">
+    Tilhengere
+</h1>
 <div class="wrapper">
     <div class="one">
-    <img class="bilder" src="Bilder/dummy-tilhenger.jpg"></div>
+    <img class="bilder" src="Bilder/Amv bilder/Tilhenger liten.PNG"/></div>
     <div class="two">Tekst om utstyr</div>
     <div class="three"><button class="booking">Sjekk Tilgjengelighet</button> </div>
-    <div class="four">Bilde av utsty</div>
+    <div class="four"> <img class="bilder" src="Bilder/Amv bilder/Tilhenger Boggi.PNG"/></div>
     <div class="five">Tekst om utstyr</div>
     <div class="six"><button class="booking">Sjekk Tilgjengelighet</button></div>
+    <div class="seven"> <img class="bilder" src="Bilder/Amv bilder/Skap Henger.PNG"/></div>
+    <div class="eight">Tekst om utstyr</div>
+    <div class="nine"><button class="booking">Sjekk Tilgjengelighet</button></div>
 </div>
 
 </body>
 </html>
 
 <style>
+    body{
+        text-align: center;
+        background-color: #f0b324;
+        margin-top: 20vh;
+    }
+    .headline{
+        margin-bottom: -10%;
+        color: #11165a;
+        font-size: 60px;
+
+    }
     .wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -106,17 +123,33 @@
         grid-column: 3;
         grid-row: 5;
     }
+    .seven {
+        grid-column: 1;
+        grid-row: 7;
+    }
+    .eight {
+        grid-column: 2;
+        grid-row: 7;
+    }
+    .nine {
+        grid-column: 3;
+        grid-row: 7;
+    }
     
     .bilder{
         display: grid;
         grid-area: image;
         size: auto;
         width: 50%;
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        mix-blend-mode: multiply;
     }
 
     .booking{
-        background-color: #008cba;
-        border: none;
+        background-color: #11165a;
+        border-radius: 20px;
         color: white;
         padding: 15px 32px;
         text-align: center;
@@ -128,9 +161,6 @@
 
     }
 
- body{
-     background-color: #f0b324;
- }
 
 
 </style>
