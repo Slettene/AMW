@@ -1,4 +1,3 @@
-//package com.amv;
 package bacit.web.bacit_web;
 
 import javax.servlet.ServletException;
@@ -31,15 +30,14 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username1");
         String password = request.getParameter("password1");
 
+        Connection db = null;
 
         try{
-
-            Class.forName("org.mariadb.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/Amv", "root", "Testingtesting1234");
+            db = DBUtils.getINSTANCE().getConnection(out);
 
 
-            Statement stm = con.createStatement();
-            ResultSet rs = stm.executeQuery("select * from Amv.Ansatte where AnsattID= '"+username+"' and ATelefon= '"+password+"'");
+            Statement stm = db.createStatement();
+            ResultSet rs = stm.executeQuery("select * from Ansatte where AnsattID= '"+username+"' and ATelefon= '"+password+"'");
 
             if(rs.next()){
                 response.sendRedirect("Home.html");
@@ -47,17 +45,12 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("Innstillinger.html");
             }
 
-            con.close();
+            db.close();
 
-        } catch (SQLException se) {
-            //Handle errors for JDBC
-            se.printStackTrace();
-
-        } catch (Exception e){
-            //Handle errors for Class.forName
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-
         }
+
 
 
 
