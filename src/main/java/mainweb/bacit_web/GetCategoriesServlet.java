@@ -1,7 +1,7 @@
-package bacit.web.bacit_web;
+package mainweb.bacit_web;
 
-import bacit.web.bacit_models.CategoryModel;
-import bacit.web.bacit_utilities.HtmlHelper;
+import mainweb.bacit_models.CategoryModel;
+import mainweb.bacit_utilities.HtmlHelper;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -52,7 +52,12 @@ public class GetCategoriesServlet extends HttpServlet {
     private Collection<CategoryModel> getCategories(PrintWriter out)throws SQLException {
         ArrayList<CategoryModel> result =  new ArrayList<CategoryModel>();
 
-        Connection db = DBUtils.getINSTANCE().getConnection(out);
+        Connection db = null;
+        try {
+            db = DBUtils.getINSTANCE().getConnection(out);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         String query3 = "select * from categories";
         PreparedStatement statement = db.prepareStatement(query3);
         ResultSet rs =  statement.executeQuery();

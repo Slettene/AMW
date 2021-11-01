@@ -1,7 +1,8 @@
-package bacit.web.bacit_web;
+package mainweb.bacit_web;
 
-import bacit.web.bacit_DAO.FileDAO;
-import bacit.web.bacit_models.FileModel;
+import mainweb.bacit_DAO.FileDAO;
+import mainweb.bacit_models.FileModel;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

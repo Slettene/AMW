@@ -1,4 +1,4 @@
-package bacit.web.bacit_models;
+package mainweb.bacit_models;
 
 public class RegisterUserModel {
     private String fullName;

@@ -1,8 +1,8 @@
-package bacit.web.bacit_web;
+package mainweb.bacit_web;
 
-import bacit.web.bacit_DAO.FileDAO;
-import bacit.web.bacit_models.FileModel;
-import bacit.web.bacit_utilities.HtmlHelper;
+import mainweb.bacit_DAO.FileDAO;
+import mainweb.bacit_models.FileModel;
+import mainweb.bacit_utilities.HtmlHelper;
 
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
