@@ -64,6 +64,16 @@
     Verktøy til utleie
 </h1>
 
+<form action="DisplayServlet" method="get">
+    <input type="submit" name="submit" value="Vis verktøy">
+</form>
+
+<form action="InsertDataServlet" method="post">
+    <input type="text" name="VerktoyNavn1">
+    <input type="text" name="VerktoyBeskrivelse1">
+    <input type="submit" name="submit" value="Legg til i database">
+</form>
+
 <div class="MyButtons">
 
     <button onclick="window.location.href='Tilhengere.html'">Tilhengere
@@ -94,7 +104,7 @@
 
     .MyButtons {
 
-     
+
 
 
     }
