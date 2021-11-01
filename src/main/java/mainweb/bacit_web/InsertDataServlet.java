@@ -1,6 +1,4 @@
-package bacit.web.bacit_web;
-
-import bacit.web.bacit_web.DBUtils;
+package mainweb.bacit_web;
 
 import java.io.*;
 import java.lang.*;
