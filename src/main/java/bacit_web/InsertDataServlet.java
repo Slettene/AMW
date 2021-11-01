@@ -1,4 +1,4 @@
-package mainweb.bacit_web;
+package bacit_web;
 
 import java.io.*;
 import java.lang.*;

@@ -1,4 +1,4 @@
-package mainweb.bacit_web;
+package bacit_web;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
