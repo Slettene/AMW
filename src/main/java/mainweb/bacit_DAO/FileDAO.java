@@ -1,7 +1,7 @@
-package bacit.web.bacit_DAO;
+package mainweb.bacit_DAO;
 
-import bacit.web.bacit_models.FileModel;
-import bacit.web.bacit_web.DBUtils;
+import mainweb.bacit_models.FileModel;
+import mainweb.bacit_web.DBUtils;
 
 import javax.sql.rowset.serial.SerialBlob;
 import java.sql.Connection;

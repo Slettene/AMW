@@ -1,6 +1,6 @@
-package bacit.web.bacit_web;
-import bacit.web.bacit_models.RegisterUserModel;
-import bacit.web.bacit_utilities.HtmlHelper;
+package mainweb.bacit_web;
+import mainweb.bacit_models.RegisterUserModel;
+import mainweb.bacit_utilities.HtmlHelper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

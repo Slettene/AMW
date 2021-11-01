@@ -1,4 +1,4 @@
-package bacit.web.bacit_web;
+package mainweb.bacit_web;
 
 import java.io.PrintWriter;
 import java.sql.Connection;
