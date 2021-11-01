@@ -1,4 +1,4 @@
-import mainweb.bacit_web.DBUtils;
+import bacit_web.DBUtils;
 
 import java.io.*;
 import javax.servlet.*;
