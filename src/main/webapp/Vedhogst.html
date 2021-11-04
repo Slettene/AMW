@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Vedhogst</title>
@@ -13,12 +13,14 @@
     <meta charset="UTF-8">
 
 </head>
-<body style="background-color: #edb431;">
+<body>
 <header class="header">
     <nav class="navbar navbar-expand-lg header.nav fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="Bilder/Logo.png" height="74.01" width="136"/>
+                <a href="Home.html">
+                    <img src="Bilder/Logo.png" height="74.01" width="136"/>
+                </a>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -43,13 +45,11 @@
                             DROP-MENY
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Hjem</a></li>
-                            <li><a class="dropdown-item" href="#">Handlekurv</a></li>
-                            <li><a class="dropdown-item" href="#">Instillinger</a></li>
-                            <li><a class="dropdown-item" href="#">Levering</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+                            <li><a class="dropdown-item" href="home.html">Hjem</a></li>
+                            <li><a class="dropdown-item" href="Handlekurv.html">Handlekurv</a></li>
+                            <li><a class="dropdown-item" href="Innstillinger.html">Innstillinger</a></li>
+                            <li><a class="dropdown-item" href="Levering.html">Levering</a></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Logg ut</a></li>
                         </ul>
 
@@ -61,48 +61,78 @@
         </div>
     </nav>
 </header>
-<ul class="flex-container">
-    <li class="flex-item">1</li>
-    <li class="flex-item">2</li>
-    <li class="flex-item">3</li>
-    <li class="flex-item">4</li>
-    <li class="flex-item">5</li>
-    <li class="flex-item">6</li>
+<h1 class="headline">
+    Vedhogst
+</h1>
+<div class="wrapper">
+    <div class="one">
+        <img class="bilder" src="Bilder/Amv bilder/Vedkløyver bensin.PNG"/></div>
+    <div class="two">Tekst om utstyr</div>
+    <div class="three"><button class="booking">Sjekk Tilgjengelighet</button> </div>
 
-</ul>
-
+</div>
 
 </body>
 </html>
 
 <style>
-    .flex-container{
-        display: flex;
-        flex-flow: column;
-        justify-content: space-around;
-        padding: 20px;
-        margin-: 20px;
-        list-style: none;
-        align-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-top: 200px;
-
-    }
-
-    .flex-item{
-        background: tomato;
-        padding: 5px;
-        width: 200px;
-        height: 150px;
-        margin-top: 10px;
-        line-height: 150px;
-        color: white;
-        font-weight: bold;
-        font-size: 3em;
+    body{
         text-align: center;
-        margin-left: 150px;
+        background-color: #f0b324;
+        margin-top: 20vh;
     }
+    .headline {
+        margin-bottom: -10%;
+        color: #11165a;
+        font-size: 60px;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+        margin: 20px;
+    }
+
+    .one {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .two {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .three {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .bilder{
+        display: grid;
+        grid-area: image;
+        size: auto;
+        width: 50%;
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        mix-blend-mode: multiply;
+    }
+
+    .booking{
+        background-color: #11165a;
+        border-radius: 20px;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+
+    }
+
 
 
 </style>
