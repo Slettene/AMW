@@ -1,4 +1,4 @@
-package bacit.web.bacit_web;
+package bacit_web;
 
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -35,7 +35,7 @@ public class DBUtils {
             toReturn = (connection != null)
                 ? connection
                 : DriverManager.getConnection(
-                    "jdbc:mariadb://172.17.0.1:3308/MytestDB",
+                    "jdbc:mariadb://172.17.0.1:3308/Amv",
                     "root",
                     "12345");
         } catch (SQLException e) {
