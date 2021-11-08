@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
 
 
             Statement stm = db.createStatement();
-            ResultSet rs = stm.executeQuery("select * from Ansatte where AnsattID= '"+username+"' and ATelefon= '"+password+"'");
+            ResultSet rs = stm.executeQuery("select * from Ansatt where AnsattID= '"+username+"' and AnsattTelefon= '"+password+"'");
 
             if(rs.next()){
                 response.sendRedirect("Home.html");
