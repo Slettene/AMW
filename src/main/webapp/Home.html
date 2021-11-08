@@ -46,7 +46,7 @@
                             <li><a class="dropdown-item" href="home.html">Hjem</a></li>
                             <li><a class="dropdown-item" href="Handlekurv.html">Handlekurv</a></li>
                             <li><a class="dropdown-item" href="Innstillinger.html">Innstillinger</a></li>
-                            <li><a class="dropdown-item" href="#">Levering</a></li>
+                            <li><a class="dropdown-item" href="Levering.html">Levering</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Logg ut</a></li>
                         </ul>
@@ -63,6 +63,27 @@
 <h1 class="headline">
     Verktøy til utleie
 </h1>
+
+<form action="DisplayServlet" method="get">
+    <input type="submit" name="submit" value="Vis verktøy i databasen">
+</form>
+
+<form action="InsertDataServlet" method="post">
+    <input type="text" name="VerktoyNavn1" placeholder="Verktøynavn">
+    <input type="text" name="VerktoyBeskrivelse1" placeholder="Verktøybeskrivelse">
+    <input type="submit" name="submit" value="Legg til i database">
+</form>
+
+<form action="InsertFileServlet" method="post">
+    <input type="file" name="file">
+    <input type="submit" name="submit" value="Last opp fil">
+</form>
+
+<form action="DisplayFileServlet" method="get">
+    <input type="text" name="filID">
+    <input type="submit" name="submit" value="Last ned fil">
+</form>
+
 
 <div class="MyButtons">
 
@@ -94,7 +115,7 @@
 
     .MyButtons {
 
-     
+
 
 
     }

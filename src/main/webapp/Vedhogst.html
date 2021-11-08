@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Vedhogst</title>
@@ -13,14 +13,14 @@
     <meta charset="UTF-8">
 
 </head>
-<body style="background-color: #edb431;">
+<body>
 <header class="header">
     <nav class="navbar navbar-expand-lg header.nav fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <a href="Home.html">
-                <img src="Bilder/Logo.png" height="74.01" width="136"/>
-            </a>
+                    <img src="Bilder/Logo.png" height="74.01" width="136"/>
+                </a>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -48,7 +48,7 @@
                             <li><a class="dropdown-item" href="home.html">Hjem</a></li>
                             <li><a class="dropdown-item" href="Handlekurv.html">Handlekurv</a></li>
                             <li><a class="dropdown-item" href="Innstillinger.html">Innstillinger</a></li>
-                            <li><a class="dropdown-item" href="#">Levering</a></li>
+                            <li><a class="dropdown-item" href="Levering.html">Levering</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Logg ut</a></li>
                         </ul>
@@ -61,20 +61,32 @@
         </div>
     </nav>
 </header>
+<h1 class="headline">
+    Vedhogst
+</h1>
 <div class="wrapper">
     <div class="one">
-        <img class="bilder" src="Bilder/dummy-tilhenger.jpg"></div>
+        <img class="bilder" src="Bilder/Amv bilder/Vedkløyver bensin.PNG"/></div>
     <div class="two">Tekst om utstyr</div>
     <div class="three"><button class="booking">Sjekk Tilgjengelighet</button> </div>
-    <div class="four">Bilde av utsty</div>
-    <div class="five">Tekst om utstyr</div>
-    <div class="six"><button class="booking">Sjekk Tilgjengelighet</button></div>
+
 </div>
 
 </body>
 </html>
 
 <style>
+    body{
+        text-align: center;
+        background-color: #f0b324;
+        margin-top: 20vh;
+    }
+    .headline {
+        margin-bottom: -10%;
+        color: #11165a;
+        font-size: 60px;
+    }
+
     .wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -82,6 +94,7 @@
         grid-auto-rows: minmax(100px, auto);
         margin: 20px;
     }
+
     .one {
         grid-column: 1;
         grid-row: 3;
@@ -94,30 +107,21 @@
         grid-column: 3;
         grid-row: 3;
     }
-    .four {
-        grid-column: 1;
-        grid-row: 5;
-    }
-    .five {
-        grid-column: 2;
-        grid-row: 5;
-    }
-    .six {
-        grid-column: 3;
-        grid-row: 5;
-    }
 
     .bilder{
         display: grid;
         grid-area: image;
         size: auto;
         width: 50%;
-        height: 50%;
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        mix-blend-mode: multiply;
     }
 
     .booking{
-        background-color: #008cba;
-        border: none;
+        background-color: #11165a;
+        border-radius: 20px;
         color: white;
         padding: 15px 32px;
         text-align: center;
@@ -129,8 +133,6 @@
 
     }
 
-    body{
-        background-color: #f0b324;
-    }
+
 
 </style>
