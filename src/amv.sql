@@ -54,6 +54,12 @@ CREATE OR REPLACE TABLE BestillingLinje
     FOREIGN KEY (VerktoyID) REFERENCES Verktoy (VerktoyID)
 );
 
+CREATE OR REPLACE TABLE Filer
+(
+    FilID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Fil longblob NOT NULL
+);
+
 INSERT INTO Kurs (KursNavn)
 VALUES ('Kurs1'),
        ('Kurs2'),
