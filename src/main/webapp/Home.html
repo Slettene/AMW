@@ -70,7 +70,10 @@
 
 <form action="InsertDataServlet" method="post">
     <input type="text" name="VerktoyNavn1" placeholder="Verktøynavn">
+    <input type="text" name="VerktoyType1" placeholder="Verktøytype">
     <input type="text" name="VerktoyBeskrivelse1" placeholder="Verktøybeskrivelse">
+    <input type="text" name="VerktoySkadet1" placeholder="VerktøySkadet (0=nei) (1=ja)">
+    <input type="text" name="VerktoyLedig1" placeholder="VerktøyLedig (0=nei) (1=ja)">
     <input type="submit" name="submit" value="Legg til i database">
 </form>
 
@@ -79,10 +82,6 @@
     <input type="submit" name="submit" value="Last opp fil">
 </form>
 
-<form action="DisplayFileServlet" method="get">
-    <input type="text" name="filID">
-    <input type="submit" name="submit" value="Last ned fil">
-</form>
 
 
 <div class="MyButtons">
