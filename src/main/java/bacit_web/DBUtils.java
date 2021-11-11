@@ -28,6 +28,7 @@ public class DBUtils {
      * @return connection to db
      * @throws SQLException if the connection fails
      */
+    //Kobler til databasen
     public Connection getConnection(PrintWriter out) throws SQLException, ClassNotFoundException {
         Connection toReturn = null;
         Class.forName("org.mariadb.jdbc.Driver");

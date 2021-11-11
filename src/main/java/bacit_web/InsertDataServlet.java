@@ -14,12 +14,12 @@ public class InsertDataServlet extends HttpServlet{
         request.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
         Connection db = null;
+        String VerktoyNavn = request.getParameter("VerktoyNavn1");
+        String VerktoyType = request.getParameter("VerktoyType1");
+        String VerktoyBeskrivelse = request.getParameter("VerktoyBeskrivelse1");
+        String VerktoySkadet = request.getParameter("VerktoySkadet1");
+        String VerktoyLedig = request.getParameter("VerktoyLedig1");
         try{
-            String VerktoyNavn = request.getParameter("VerktoyNavn1");
-            String VerktoyType = request.getParameter("VerktoyType1");
-            String VerktoyBeskrivelse = request.getParameter("VerktoyBeskrivelse1");
-            String VerktoySkadet = request.getParameter("VerktoySkadet1");
-            String VerktoyLedig = request.getParameter("VerktoyLedig1");
             db = DBUtils.getINSTANCE().getConnection(out);
             PreparedStatement pst = db.prepareStatement("insert into Verktoy(VerktoyNavn, VerktoyType, VerktoyBeskrivelse, VerktoySkadet, VerktoyLedig) values(?,?,?,?,?)");
             pst.setString(1,VerktoyNavn);
