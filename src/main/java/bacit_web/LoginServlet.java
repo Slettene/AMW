@@ -15,7 +15,7 @@ import java.sql.*;
 
 @WebServlet (urlPatterns = {"/LoginServlet"})
 public class LoginServlet extends HttpServlet {
-
+//denne doGet har ingen funksjon og kan fjernes, ble lagt til i starten
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
