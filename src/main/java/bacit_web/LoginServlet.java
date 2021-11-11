@@ -15,12 +15,6 @@ import java.sql.*;
 
 @WebServlet (urlPatterns = {"/LoginServlet"})
 public class LoginServlet extends HttpServlet {
-//denne doGet har ingen funksjon og kan fjernes, ble lagt til i starten
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws IOException, ServletException {
-        doPost(request, response);
-    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -42,7 +36,9 @@ public class LoginServlet extends HttpServlet {
             if(rs.next()){
                 response.sendRedirect("Home.html");
             }else {
-                response.sendRedirect("Innstillinger.html");
+                out.println("Feil brukernavn, eller passord");
+             //   response.sendRedirect("Innstillinger.html");
+                out.println("<button onclick=\"window.location.href='Login.html'\">Tilbake\n" + "</button>");
             }
 
             db.close();
