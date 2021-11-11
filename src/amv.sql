@@ -10,10 +10,12 @@ CREATE OR REPLACE TABLE Kurs
 
 CREATE OR REPLACE TABLE Ansatt
 (
-    AnsattID      SMALLINT           NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    AnsattMail    VARCHAR(50) UNIQUE NOT NULL,
-    AnsattTelefon VARCHAR(8) UNIQUE  NOT NULL,
-    Organisert    BOOLEAN            NOT NULL
+    AnsattID         SMALLINT           NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    AnsattMail       VARCHAR(50) UNIQUE NOT NULL,
+    AnsattTelefon    VARCHAR(8) UNIQUE  NOT NULL,
+    AnsattOrganisert BOOLEAN            NOT NULL,
+    AnsattAdmin      BOOLEAN            NOT NULL
+
 );
 
 CREATE OR REPLACE TABLE Sertifikat
@@ -56,8 +58,8 @@ CREATE OR REPLACE TABLE BestillingLinje
 
 CREATE OR REPLACE TABLE Filer
 (
-    FilID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Fil longblob NOT NULL
+    FilID INT      NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Fil   longblob NOT NULL
 );
 
 INSERT INTO Kurs (KursNavn)
@@ -67,17 +69,17 @@ VALUES ('Kurs1'),
        ('Sertifikat1'),
        ('Sertifikat2');
 
-INSERT INTO Ansatt (AnsattMail, AnsattTelefon, Organisert)
-VALUES ('abdi@hotmail.no', '97782133', false),
-       ('kenneth@hotmail.com', '79982355', false),
-       ('henrik@outlook.com', '98756321', true),
-       ('markus@gmail.com', '58965412', false),
-       ('hanne@wihabu.net', '98856200', false),
-       ('jenny@skavlan.no', '95020800', false),
-       ('JohnArne@Riise.no', '90090090', false),
-       ('Bill.Gates@microsoft.com', '12345678', true),
-       ('jostein@amv.no', '97719800', false),
-       ('henke@spacemonkymail.no', '97719300', true);
+INSERT INTO Ansatt (AnsattMail, AnsattTelefon, AnsattOrganisert, AnsattAdmin)
+VALUES ('abdi@hotmail.no', '97782133', false, TRUE),
+       ('kenneth@hotmail.com', '79982355', false, false),
+       ('henrik@outlook.com', '98756321', true, false),
+       ('markus@gmail.com', '58965412', false, false),
+       ('hanne@wihabu.net', '98856200', false, false),
+       ('jenny@skavlan.no', '95020800', false, false),
+       ('JohnArne@Riise.no', '90090090', false, false),
+       ('Bill.Gates@microsoft.com', '12345678', true, false),
+       ('jostein@amv.no', '97719800', false, false),
+       ('henke@spacemonkymail.no', '97719300', true, false);
 
 INSERT INTO Sertifikat(KursID, AnsattID)
 VALUES (1, 1),
