@@ -12,10 +12,10 @@ CREATE OR REPLACE TABLE Ansatt
 (
     AnsattID         SMALLINT           NOT NULL AUTO_INCREMENT PRIMARY KEY,
     AnsattMail       VARCHAR(50) UNIQUE NOT NULL,
-    AnsattTelefon    VARCHAR(8) UNIQUE  NOT NULL,
+    AnsattTelefon    VARCHAR(8)  UNIQUE NOT NULL,
     AnsattOrganisert BOOLEAN            NOT NULL,
-    AnsattAdmin      BOOLEAN            NOT NULL
-
+    AnsattAdmin      BOOLEAN            NOT NULL,
+    AnsattPassord    VARCHAR(25)        NOT NULL
 );
 
 CREATE OR REPLACE TABLE Sertifikat
@@ -69,17 +69,17 @@ VALUES ('Kurs1'),
        ('Sertifikat1'),
        ('Sertifikat2');
 
-INSERT INTO Ansatt (AnsattMail, AnsattTelefon, AnsattOrganisert, AnsattAdmin)
-VALUES ('abdi@hotmail.no', '97782133', false, TRUE),
-       ('kenneth@hotmail.com', '79982355', false, false),
-       ('henrik@outlook.com', '98756321', true, false),
-       ('markus@gmail.com', '58965412', false, false),
-       ('hanne@wihabu.net', '98856200', false, false),
-       ('jenny@skavlan.no', '95020800', false, false),
-       ('JohnArne@Riise.no', '90090090', false, false),
-       ('Bill.Gates@microsoft.com', '12345678', true, false),
-       ('jostein@amv.no', '97719800', false, false),
-       ('henke@spacemonkymail.no', '97719300', true, false);
+INSERT INTO Ansatt (AnsattMail, AnsattTelefon, AnsattOrganisert, AnsattAdmin, AnsattPassord)
+VALUES ('abdi@hotmail.no', '97782133', false, TRUE, 'passord1'),
+       ('kenneth@hotmail.com', '79982355', false, false, 'passord2'),
+       ('henrik@outlook.com', '98756321', true, false, 'passord3'),
+       ('markus@gmail.com', '58965412', false, false, 'passord4'),
+       ('hanne@wihabu.net', '98856200', false, false, 'passord5'),
+       ('jenny@skavlan.no', '95020800', false, false, 'passord6'),
+       ('JohnArne@Riise.no', '90090090', false, false, 'passord7'),
+       ('Bill.Gates@microsoft.com', '12345678', true, false, 'passord8'),
+       ('jostein@amv.no', '97719800', false, false, 'passord9'),
+       ('henke@spacemonkymail.no', '97719300', true, false, 'passord10');
 
 INSERT INTO Sertifikat(KursID, AnsattID)
 VALUES (1, 1),
