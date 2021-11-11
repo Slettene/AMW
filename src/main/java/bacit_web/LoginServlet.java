@@ -42,7 +42,8 @@ public class LoginServlet extends HttpServlet {
             if(rs.next()){
                 response.sendRedirect("Home.html");
             }else {
-                response.sendRedirect("Innstillinger.html");
+                out.println("Feil brukernavn, eller passord");
+             //   response.sendRedirect("Innstillinger.html");
             }
 
             db.close();
