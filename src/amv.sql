@@ -10,10 +10,12 @@ CREATE OR REPLACE TABLE Kurs
 
 CREATE OR REPLACE TABLE Ansatt
 (
-    AnsattID      SMALLINT           NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    AnsattMail    VARCHAR(50) UNIQUE NOT NULL,
-    AnsattTelefon VARCHAR(8) UNIQUE  NOT NULL,
-    Organisert    BOOLEAN            NOT NULL
+    AnsattID         SMALLINT           NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    AnsattMail       VARCHAR(50) UNIQUE NOT NULL,
+    AnsattTelefon    VARCHAR(8) UNIQUE  NOT NULL,
+    AnsattOrganisert BOOLEAN            NOT NULL,
+    AnsattAdmin      BOOLEAN            NOT NULL
+
 );
 
 CREATE OR REPLACE TABLE Sertifikat
@@ -56,8 +58,8 @@ CREATE OR REPLACE TABLE BestillingLinje
 
 CREATE OR REPLACE TABLE Filer
 (
-    FilID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Fil longblob NOT NULL
+    FilID INT      NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Fil   longblob NOT NULL
 );
 
 INSERT INTO Kurs (KursNavn)
