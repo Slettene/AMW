@@ -27,7 +27,7 @@ public class LoginServlet extends HttpServlet {
         Connection db = null;
 
         try{
-            db = DBUtils.getINSTANCE().getConnection(out);
+            db = DBUtils.getINSTANCE().getConnection();
 
 
             Statement stm = db.createStatement();

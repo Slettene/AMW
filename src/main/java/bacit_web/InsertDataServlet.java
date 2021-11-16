@@ -20,7 +20,7 @@ public class InsertDataServlet extends HttpServlet{
         String VerktoySkadet = request.getParameter("VerktoySkadet1");
         String VerktoyLedig = request.getParameter("VerktoyLedig1");
         try{
-            db = DBUtils.getINSTANCE().getConnection(out);
+            db = DBUtils.getINSTANCE().getConnection();
             PreparedStatement pst = db.prepareStatement("insert into Verktoy(VerktoyNavn, VerktoyType, VerktoyBeskrivelse, VerktoySkadet, VerktoyLedig) values(?,?,?,?,?)");
             pst.setString(1,VerktoyNavn);
             pst.setString(2,VerktoyType);

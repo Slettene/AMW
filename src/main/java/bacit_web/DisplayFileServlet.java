@@ -37,7 +37,7 @@ public class DisplayFileServlet extends HttpServlet {
 
         try {
             // connects to the database
-            db = DBUtils.getINSTANCE().getConnection(out);
+            db = DBUtils.getINSTANCE().getConnection();
 
 
             // queries the database

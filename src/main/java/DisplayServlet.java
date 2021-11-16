@@ -17,7 +17,7 @@ public class DisplayServlet extends HttpServlet
         Connection db = null;
         try
         {
-            db = DBUtils.getINSTANCE().getConnection(out);
+            db = DBUtils.getINSTANCE().getConnection();
             Statement stmt = db.createStatement();
             ResultSet rs = stmt.executeQuery("select * from Verktoy");
             out.println("<table border=1 width=50% height=50%>");

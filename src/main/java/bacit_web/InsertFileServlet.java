@@ -15,7 +15,7 @@ public class InsertFileServlet extends HttpServlet {
         Connection db = null;
         try{
             String file = request.getParameter("file");
-            db = DBUtils.getINSTANCE().getConnection(out);
+            db = DBUtils.getINSTANCE().getConnection();
             PreparedStatement pst = db.prepareStatement("insert into Filer(Fil) values(?)");
             pst.setObject(1,file);
 

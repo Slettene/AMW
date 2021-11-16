@@ -68,20 +68,13 @@
     <input type="submit" name="submit" value="Vis verktøy i databasen">
 </form>
 
-<form action="InsertDataServlet" method="post">
-    <input type="text" name="VerktoyNavn1" placeholder="Verktøynavn">
-    <input type="text" name="VerktoyType1" placeholder="Verktøytype">
-    <input type="text" name="VerktoyBeskrivelse1" placeholder="Verktøybeskrivelse">
-    <input type="text" name="VerktoySkadet1" placeholder="VerktøySkadet (0=nei) (1=ja)">
-    <input type="text" name="VerktoyLedig1" placeholder="VerktøyLedig (0=nei) (1=ja)">
-    <input type="submit" name="submit" value="Legg til i database">
+<form action="ServletAdminPage" method="get">
+    <input type="submit" name="submit" value="Gå til Adminsiden">
 </form>
 
-<form action="InsertFileServlet" method="post">
-    <input type="file" name="file">
-    <input type="submit" name="submit" value="Last opp fil">
+<form action="ServletLogout" method="post">
+    <input type="submit" name="submit" value="Logg ut">
 </form>
-
 
 
 <div class="MyButtons">
