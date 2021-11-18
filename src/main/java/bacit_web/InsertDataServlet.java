@@ -30,7 +30,7 @@ public class InsertDataServlet extends HttpServlet{
             int i = pst.executeUpdate();
             if(i!=0){
                 out.println("<br>Data lagt til i database");
-                out.println("<button onclick=\"window.location.href='Home.html'\">Tilbake\n" + "</button>");
+                out.println("<button onclick=\"window.location.href='AdminPage.html'\">Tilbake\n" + "</button>");
             }
             else{
                 out.println("Kunne ikke legge til data i databasen");
