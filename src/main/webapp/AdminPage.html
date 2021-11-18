@@ -63,23 +63,94 @@
 <h1 class="headline">
     Admin
 </h1>
+<h2 class="headLine2">
+    Administrer verktøy
+</h2>
 
 <form action="DisplayServlet" method="get">
-    <input type="submit" name="submit" value="Vis verktøy i databasen">
+    <input type="submit" name="submit1" value="Vis verktøy i databasen">
 </form>
 
 <form action="InsertDataServlet" method="post">
+    <h5>Legg til verktøy i databasen</h5>
     <input type="text" name="VerktoyNavn1" placeholder="Verktøynavn">
+    <br/>
     <input type="text" name="VerktoyType1" placeholder="Verktøytype">
+    <br/>
     <input type="text" name="VerktoyBeskrivelse1" placeholder="Verktøybeskrivelse">
+    <br/>
     <input type="text" name="VerktoySkadet1" placeholder="VerktøySkadet (0=nei) (1=ja)">
+    <br/>
     <input type="text" name="VerktoyLedig1" placeholder="VerktøyLedig (0=nei) (1=ja)">
+    <br/>
     <input type="submit" name="submit" value="Legg til i database">
 </form>
 
-<form action="InsertFileServlet" method="post">
-    <input type="file" name="file">
-    <input type="submit" name="submit" value="Last opp fil">
+<form action="UpdateDataServlet" method="post">
+    <h5>Oppdater verktøy i databasen</h5>
+    <input type="text" name="VerktoyID2" placeholder="VerktøyID">
+    <br/>
+    <input type="text" name="VerktoyNavn2" placeholder="Verktøynavn">
+    <br/>
+    <input type="text" name="VerktoyType2" placeholder="Verktøytype">
+    <br/>
+    <input type="text" name="VerktoyBeskrivelse2" placeholder="Verktøybeskrivelse">
+    <br/>
+    <input type="text" name="VerktoySkadet2" placeholder="VerktøySkadet (0=nei) (1=ja)">
+    <br/>
+    <input type="text" name="VerktoyLedig2" placeholder="VerktøyLedig (0=nei) (1=ja)">
+    <br/>
+    <input type="submit" name="submit" value="Endre verktøy">
+</form>
+
+<form action="ServletDeleteData" method="post">
+    <h5>Fjern verktøy fra databasen</h5>
+    <input type="text" name="VerktoyID1" placeholder="Fyll inn VerktøyID">
+    <input type="submit" name="submit" value="Fjern verktøy">
+</form>
+
+<h2 class="headLine3">
+    Administrer brukere
+</h2>
+
+<form action="DisplayUsersServlet" method="get">
+    <input type="submit" name="submit1" value="Vis ansatte i databasen">
+</form>
+
+<form action="ServletAddUser" method="post">
+    <h5>Legg til ansatt i databasen</h5>
+    <input type="text" name="AnsattMail1" placeholder="AnsattMail">
+    <br/>
+    <input type="text" name="AnsattTelefon1" placeholder="AnsattTelefon">
+    <br/>
+    <input type="text" name="AnsattOrganisert1" placeholder="AnsattOrganisert (0=ikke Organisert, 1=Organisert)">
+    <br/>
+    <input type="text" name="AnsattAdmin1" placeholder="AnsattAdmin (0=ikke admin, 1=Admin)">
+    <br/>
+    <input type="submit" name="submit" value="Legg til i database">
+</form>
+
+<form action="ServletUpdateUser" method="post">
+    <h5>Oppdater ansatt i databasen</h5>
+    <input type="text" name="AnsattID2" placeholder="AnsattID">
+    <br/>
+    <input type="text" name="AnsattMail2" placeholder="AnsattMail">
+    <br/>
+    <input type="text" name="AnsattTelefon2" placeholder="AnsattTelefon">
+    <br/>
+    <input type="text" name="AnsattOrganisert2" placeholder="AnsattOrganisert (0=ikke Organisert, 1=Organisert)">
+    <br/>
+    <input type="text" name="AnsattAdmin2" placeholder="AnsattAdmin (0=ikke admin, 1=Admin)">
+    <br/>
+    <input type="submit" name="submit" value="Oppdater ansatt">
+</form>
+
+
+
+<form action="ServletDeleteUser" method="post">
+    <h5>Slett ansatt fra databasen</h5>
+    <input type="text" name="AnsattTelefon" placeholder="Fyll inn AnsattTelefon">
+    <input type="submit" name="submit" value="Slett bruker">
 </form>
 
 
@@ -96,34 +167,38 @@
 
     }
 
-    .MyButtons {
-
-
-
-
-    }
-
-    .MyButtons button {
-
-        color: #181818;
-        background-color: #f0b324;
-        font-size: 20px;
-        transition-duration: 0.4s;
-        height: 100px;
-        width: 400px;
-        border-radius: 20px;
-        border: solid #181818;
-        border-width: 2px;
-        margin: 10px;
-    }
-
-    .MyButtons button:hover {
-        background-color: #ffffff;
-        color: rgb(237, 180, 49);
-    }
     .headline{
         font-size: 60px;
         color: #11165a;
         margin-bottom: 100px;
+    }
+    .headLine2{
+        font-size: 30px;
+        color: #11165a;
+        margin-bottom: 25px;
+    }
+    .headLine3{
+        font-size: 30px;
+        color: #11165a;
+        margin-top: 90px;
+        margin-bottom: 25px;
+    }
+    br{
+        display: block; /* makes it have a width */
+        content: ""; /* clears default height */
+        margin-top: 10px; /* change this to whatever height you want it */
+    }
+    form {
+        margin-right: 50%;
+
+    }
+    input[name=submit1]{
+        border-radius: 8px;
+        width: 35%;
+        height: 30px;
+        background-color: #11165a;
+        color: white;
+        border-color: #11165a;
+        border: #11165a;
     }
 </style>
