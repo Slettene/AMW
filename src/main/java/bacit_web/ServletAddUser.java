@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 @WebServlet(urlPatterns = {"/ServletAddUser"})
+//Legge til i databasen
 public class ServletAddUser extends HttpServlet{
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.setContentType("text/html");
@@ -19,6 +20,7 @@ public class ServletAddUser extends HttpServlet{
         String AnsattOrganisert = request.getParameter("AnsattOrganisert1");
         String AnsattAdmin = request.getParameter("AnsattAdmin1");
         try{
+            //Legge til ansatte
             db = DBUtils.getINSTANCE().getConnection();
             PreparedStatement pst = db.prepareStatement("insert into Ansatt(AnsattMail, AnsattTelefon, AnsattOrganisert, AnsattAdmin) values(?,?,?,?)");
             pst.setString(1,AnsattMail);
