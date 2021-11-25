@@ -8,6 +8,7 @@ import java.sql.*;
 
 @WebServlet(urlPatterns = {"/DisplayUsersServlet"})
 public class DisplayUsersServlet extends HttpServlet
+    //Viser ansatte i databasen
 {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
     {

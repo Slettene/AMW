@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+//Lager objektet som kobler til DB
 public class DBUtils {
     private static final DBUtils INSTANCE = new DBUtils();
     static Connection connection;
