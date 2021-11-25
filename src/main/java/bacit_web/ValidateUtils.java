@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+//Sjekker om input stemmer med databasen
 public class ValidateUtils {
     public boolean validateLogin(String ansattID, String ansattTelefon) {
         Connection db;
@@ -38,7 +38,7 @@ public class ValidateUtils {
         }
         return false;
     }
-
+//Sjekker om bruker er admin i databasen
     public boolean validateAdmin(HttpSession session) {
         Connection db;
         PreparedStatement ps;
