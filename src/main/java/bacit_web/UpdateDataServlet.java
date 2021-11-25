@@ -7,6 +7,8 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
+//Endre verktøy i databasen
+
 @WebServlet(urlPatterns = {"/UpdateDataServlet"})
 public class UpdateDataServlet extends HttpServlet{
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -16,6 +18,8 @@ public class UpdateDataServlet extends HttpServlet{
         Connection db = null;
         PreparedStatement pst = null;
 
+        //Henter input
+
         try{
             String VerktoyID = request.getParameter("VerktoyID2");
             String VerktoyNavn = request.getParameter("VerktoyNavn2");
@@ -24,6 +28,8 @@ public class UpdateDataServlet extends HttpServlet{
             String VerktoySkadet = request.getParameter("VerktoySkadet2");
             String VerktoyLedig = request.getParameter("VerktoyLedig2");
             db = DBUtils.getINSTANCE().getConnection();
+
+            //Utfører endring i databasen
 
             if(request.getParameter("VerktoyID")==null)
                 pst = db.prepareStatement("update Verktoy set VerktoyNavn=?, VerktoyType=?, VerktoyBeskrivelse=?, VerktoySkadet=?, VerktoyLedig=? where VerktoyID=?");

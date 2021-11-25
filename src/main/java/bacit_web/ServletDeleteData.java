@@ -12,7 +12,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-
+//Sletter verktøy fra databasen
 @WebServlet("/ServletDeleteData")
 public class ServletDeleteData extends HttpServlet {
 
@@ -23,7 +23,7 @@ public class ServletDeleteData extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String verktoyID = request.getParameter("VerktoyID1");
-
+        //Prepared statement for å slette verktøy
         try {
             db = DBUtils.getINSTANCE().getConnection();
             String query = "delete from Amv.Verktoy where VerktoyID = ?";

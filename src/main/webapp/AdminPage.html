@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <!DOCTYPE html>
 <html>
-<head>
+<head> //Head linker til CSS, og navbar + title
     <title>AMV-Home</title>
 
     <link rel="stylesheet" href="Master.css">
@@ -12,7 +12,7 @@
             crossorigin="anonymous"></script>
     <meta charset="UTF-8">
 
-</head>
+</head> //Alt i Header er NAVbar relatert
 <body>
 <header class="header">
     <nav class="navbar navbar-expand-lg header.nav fixed-top">
@@ -66,11 +66,11 @@
 <h2 class="headLine2">
     Administrer verktøy
 </h2>
-
+    //Form som viser verktøy via doGet
 <form action="DisplayServlet" method="get">
     <input type="submit" name="submit1" value="Vis verktøy i databasen">
 </form>
-
+//Legge til verktøy i db via doPost
 <form action="InsertDataServlet" method="post">
     <h5>Legg til verktøy i databasen</h5>
     <input type="text" name="VerktoyNavn1" placeholder="Verktøynavn">
@@ -85,7 +85,7 @@
     <br/>
     <input type="submit" name="submit" value="Legg til i database">
 </form>
-
+//Endre vertøy i db via doPost
 <form action="UpdateDataServlet" method="post">
     <h5>Oppdater verktøy i databasen</h5>
     <input type="text" name="VerktoyID2" placeholder="VerktøyID">

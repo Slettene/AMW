@@ -24,6 +24,8 @@ public class ValidateUtils {
             ps.setString(2, ansattTelefon);
             rs = ps.executeQuery();
 
+            //Validerer om brukernavn og passord stemmer overens
+
             rs.next();
             String dbAnsattID = rs.getString("AnsattID");
             String dbAnsattTelefon = rs.getString("AnsattTelefon");
