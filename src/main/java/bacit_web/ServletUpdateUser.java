@@ -6,7 +6,7 @@ import java.sql.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
-
+//Endrer brukere i databasen
 @WebServlet(urlPatterns = {"/ServletUpdateUser"})
 public class ServletUpdateUser extends HttpServlet{
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -16,6 +16,8 @@ public class ServletUpdateUser extends HttpServlet{
         Connection db = null;
         PreparedStatement pst = null;
 
+        //Henter input for hva som skal slettes
+
         try{
             String AnsattID = request.getParameter("AnsattID2");
             String AnsattMail = request.getParameter("AnsattMail2");
@@ -23,6 +25,8 @@ public class ServletUpdateUser extends HttpServlet{
             String AnsattOrganisert = request.getParameter("AnsattOrganisert2");
             String AnsattAdmin = request.getParameter("AnsattAdmin2");
             db = DBUtils.getINSTANCE().getConnection();
+
+            //Sletter bruker via prepared statement
 
             if(request.getParameter("AnsattID")==null)
                 pst = db.prepareStatement("update Ansatt set AnsattMail=?, AnsattTelefon=?, AnsattOrganisert=?, AnsattAdmin=? where AnsattID=?");

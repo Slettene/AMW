@@ -15,7 +15,7 @@ import java.sql.SQLException;
 
 @WebServlet("/ServletAdminPage")
 public class ServletAdminPage extends HttpServlet {
-
+//Sjekker om session inneholder admin
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
@@ -25,31 +25,11 @@ public class ServletAdminPage extends HttpServlet {
         HttpSession session = request.getSession();
 
         ValidateUtils v = new ValidateUtils();
-
+//Kaller på metode fra ValidateUtils som validerer om bruker er admin
         if (v.validateAdmin(session) == true) {
             request.getRequestDispatcher("AdminPage.html").forward(request, response);
         } else {
             out.println("Du er ikke admin!");
-        }
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
-        Connection con;
-        PreparedStatement ps;
-
-        String ansattID = request.getParameter("AnsattID1");
-
-        try {
-            con = DBUtils.getINSTANCE().getConnection();
-            String query = "delete from Amv.Ansatt where AnsattAdmin = ?";
-            ps = con.prepareStatement(query);
-            ps.setString(1, ansattID);
-            ps.execute();
-            response.sendRedirect("AdminPage.html");
-        } catch (SQLException | ClassNotFoundException throwables) {
-            throwables.printStackTrace();
         }
     }
 }

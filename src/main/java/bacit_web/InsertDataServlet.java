@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 @WebServlet(urlPatterns = {"/InsertDataServlet"})
+//Legge til nye verktøy
 public class InsertDataServlet extends HttpServlet{
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.setContentType("text/html");
@@ -27,6 +28,9 @@ public class InsertDataServlet extends HttpServlet{
             pst.setString(3,VerktoyBeskrivelse);
             pst.setString(4,VerktoySkadet);
             pst.setString(5,VerktoyLedig);
+
+            //Legger til i databasen så lenge "i" ikke er 0
+
             int i = pst.executeUpdate();
             if(i!=0){
                 out.println("<br>Data lagt til i database");
