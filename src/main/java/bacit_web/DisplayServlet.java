@@ -1,3 +1,5 @@
+package bacit_web;
+
 import bacit_web.DBUtils;
 
 import java.io.*;
@@ -6,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.sql.*;
 
-@WebServlet(urlPatterns = {"/DisplayServlet"})
+@WebServlet(urlPatterns = {"/bacit_web.DisplayServlet"})
 public class DisplayServlet extends HttpServlet
 {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
@@ -33,7 +35,7 @@ public class DisplayServlet extends HttpServlet
                 out.println("<tr><td>" + n + "</td><td>" + nm + "</td><td>" + nt + "</td><td>" + s + "</td><td>" + ns + "</td><td>" + nl + "</td></tr>");
             }
             out.println("</table>");
-            out.println("<button onclick=\"window.location.href='AdminPage.html'\">Tilbake\n" + "</button>");
+            out.println("<button onclick=\"window.location.href='Home.html'\">Tilbake\n" + "</button>");
             out.println("</html></body>");
             db.close();
         }
