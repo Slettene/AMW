@@ -12,7 +12,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-
+//Sletter bruker fra databasen
 @WebServlet("/ServletDeleteUser")
 public class ServletDeleteUser extends HttpServlet {
 
@@ -23,7 +23,7 @@ public class ServletDeleteUser extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String ansattTelefon = request.getParameter("AnsattTelefon");
-
+        //Prepared statement for slette i databasen
         try {
             db = DBUtils.getINSTANCE().getConnection();
             String query = "delete from Amv.Ansatt where AnsattTelefon = ?";
