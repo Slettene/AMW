@@ -13,6 +13,7 @@ import java.io.PrintWriter;
 @WebServlet("/ServletLogout")
 public class ServletLogout extends HttpServlet
 {
+    //Stopper session når bruker logger ut
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();

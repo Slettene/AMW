@@ -9,9 +9,13 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+//Validerer brukere fra databasen
+
 @WebServlet(value = "/ServletLogin")
 public class ServletLogin extends HttpServlet {
     private static final long serialVersionUID = 1L;
+
+//Setter parameter for login
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -23,11 +27,12 @@ public class ServletLogin extends HttpServlet {
 
         ValidateUtils v = new ValidateUtils();
 
+        //Validerer om parameter finnes i databasen og at de stemmer overens
+
         if (v.validateLogin(ansattID, ansattTelefon) == true) {
             HttpSession session = request.getSession();
             session.setAttribute("AnsattID", ansattID);
 
-            //out.println("Du er nå logget inn!");
             response.sendRedirect("Home.html");
 
         } else {
