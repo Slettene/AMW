@@ -1,0 +1,204 @@
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AMV-Home</title>
+
+    <link rel="stylesheet" href="Master.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<header class="header">
+    <nav class="navbar navbar-expand-lg header.nav fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Home.html">
+                <img src="Bilder/Logo.png" height="74.01" width="136"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link-logo" href="#">
+                            <img src="Bilder/-shopping-cart_90604.png" height="35" width="35"/>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link-dropdown dropdown-toggle" id="navbarDropdown" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            DROP-MENY
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Home.html">Hjem</a></li>
+                            <li><a class="dropdown-item" href="Handlekurv.html">Handlekurv</a></li>
+                            <li><a class="dropdown-item" href="Innstillinger.html">Innstillinger</a></li>
+                            <li><a class="dropdown-item" href="Levering.html">Levering</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Login.html">Logg ut</a></li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<h1 class="headline">
+    Admin
+</h1>
+<h2 class="headLine2">
+    Administrer verktøy
+</h2>
+
+<form action="DisplayServlet" method="get">
+    <input type="submit" name="submit1" value="Vis verktøy i databasen">
+</form>
+
+<form action="InsertDataServlet" method="post">
+    <h5>Legg til verktøy i databasen</h5>
+    <input type="text" name="VerktoyNavn1" placeholder="Verktøynavn">
+    <br/>
+    <input type="text" name="VerktoyType1" placeholder="Verktøytype">
+    <br/>
+    <input type="text" name="VerktoyBeskrivelse1" placeholder="Verktøybeskrivelse">
+    <br/>
+    <input type="text" name="VerktoySkadet1" placeholder="VerktøySkadet (0=nei) (1=ja)">
+    <br/>
+    <input type="text" name="VerktoyLedig1" placeholder="VerktøyLedig (0=nei) (1=ja)">
+    <br/>
+    <input type="submit" name="submit" value="Legg til i database">
+</form>
+
+<form action="UpdateDataServlet" method="post">
+    <h5>Oppdater verktøy i databasen</h5>
+    <input type="text" name="VerktoyID2" placeholder="VerktøyID">
+    <br/>
+    <input type="text" name="VerktoyNavn2" placeholder="Verktøynavn">
+    <br/>
+    <input type="text" name="VerktoyType2" placeholder="Verktøytype">
+    <br/>
+    <input type="text" name="VerktoyBeskrivelse2" placeholder="Verktøybeskrivelse">
+    <br/>
+    <input type="text" name="VerktoySkadet2" placeholder="VerktøySkadet (0=nei) (1=ja)">
+    <br/>
+    <input type="text" name="VerktoyLedig2" placeholder="VerktøyLedig (0=nei) (1=ja)">
+    <br/>
+    <input type="submit" name="submit" value="Endre verktøy">
+</form>
+
+<form action="ServletDeleteData" method="post">
+    <h5>Fjern verktøy fra databasen</h5>
+    <input type="text" name="VerktoyID1" placeholder="Fyll inn VerktøyID">
+    <input type="submit" name="submit" value="Fjern verktøy">
+</form>
+
+<h2 class="headLine3">
+    Administrer brukere
+</h2>
+
+<form action="DisplayUsersServlet" method="get">
+    <input type="submit" name="submit1" value="Vis ansatte i databasen">
+</form>
+
+<form action="ServletAddUser" method="post">
+    <h5>Legg til ansatt i databasen</h5>
+    <input type="text" name="AnsattMail1" placeholder="AnsattMail">
+    <br/>
+    <input type="text" name="AnsattTelefon1" placeholder="AnsattTelefon">
+    <br/>
+    <input type="text" name="AnsattOrganisert1" placeholder="AnsattOrganisert (0=ikke Organisert, 1=Organisert)">
+    <br/>
+    <input type="text" name="AnsattAdmin1" placeholder="AnsattAdmin (0=ikke admin, 1=Admin)">
+    <br/>
+    <input type="submit" name="submit" value="Legg til i database">
+</form>
+
+<form action="ServletUpdateUser" method="post">
+    <h5>Oppdater ansatt i databasen</h5>
+    <input type="text" name="AnsattID2" placeholder="AnsattID">
+    <br/>
+    <input type="text" name="AnsattMail2" placeholder="AnsattMail">
+    <br/>
+    <input type="text" name="AnsattTelefon2" placeholder="AnsattTelefon">
+    <br/>
+    <input type="text" name="AnsattOrganisert2" placeholder="AnsattOrganisert (0=ikke Organisert, 1=Organisert)">
+    <br/>
+    <input type="text" name="AnsattAdmin2" placeholder="AnsattAdmin (0=ikke admin, 1=Admin)">
+    <br/>
+    <input type="submit" name="submit" value="Oppdater ansatt">
+</form>
+
+
+
+<form action="ServletDeleteUser" method="post">
+    <h5>Slett ansatt fra databasen</h5>
+    <input type="text" name="AnsattTelefon" placeholder="Fyll inn AnsattTelefon">
+    <input type="submit" name="submit" value="Slett bruker">
+</form>
+
+
+</body>
+</html>
+
+<style>
+
+
+    body {
+        text-align: center;
+        background-color: #f0b324;
+        margin-top: 20vh;
+
+    }
+
+    .headline{
+        font-size: 60px;
+        color: #11165a;
+        margin-bottom: 100px;
+    }
+    .headLine2{
+        font-size: 30px;
+        color: #11165a;
+        margin-bottom: 25px;
+    }
+    .headLine3{
+        font-size: 30px;
+        color: #11165a;
+        margin-top: 90px;
+        margin-bottom: 25px;
+    }
+    br{
+        display: block; /* makes it have a width */
+        content: ""; /* clears default height */
+        margin-top: 10px; /* change this to whatever height you want it */
+    }
+    form {
+        margin-right: 50%;
+
+    }
+    input[name=submit1]{
+        border-radius: 8px;
+        width: 35%;
+        height: 30px;
+        background-color: #11165a;
+        color: white;
+        border-color: #11165a;
+        border: #11165a;
+    }
+</style>

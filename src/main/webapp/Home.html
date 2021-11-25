@@ -43,12 +43,12 @@
                             DROP-MENY
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="home.html">Hjem</a></li>
+                            <li><a class="dropdown-item" href="Home.html">Hjem</a></li>
                             <li><a class="dropdown-item" href="Handlekurv.html">Handlekurv</a></li>
                             <li><a class="dropdown-item" href="Innstillinger.html">Innstillinger</a></li>
                             <li><a class="dropdown-item" href="Levering.html">Levering</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Logg ut</a></li>
+                            <li><a class="dropdown-item" href="Login.html">Logg ut</a></li>
                         </ul>
 
                     </li>
@@ -65,19 +65,17 @@
 </h1>
 
 <form action="DisplayServlet" method="get">
-    <input type="submit" name="submit" value="Vis verktøy">
+    <input type="submit" name="submit" value="Vis verktøy i databasen">
 </form>
 
-<form action="InsertDataServlet" method="post">
-    <input type="text" name="VerktoyNavn1" placeholder="Verktøynavn">
-    <input type="text" name="VerktoyBeskrivelse1" placeholder="Verktøybeskrivelse">
-    <input type="submit" name="submit" value="Legg til i database">
+<form action="ServletAdminPage" method="get">
+    <input type="submit" name="submit" value="Gå til Adminsiden">
 </form>
 
-<form action="DisplayServlet" method="post">
-    <input type="file" name="file">
-    <input type="submit" name="submit" value="Last opp fil">
+<form action="ServletLogout" method="post">
+    <input type="submit" name="submit" value="Logg ut">
 </form>
+
 
 <div class="MyButtons">
 
