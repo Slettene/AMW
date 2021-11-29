@@ -17,9 +17,9 @@ public class DisplayServlet extends HttpServlet
         PrintWriter out = response.getWriter();
         response.setContentType("text/html");
         out.println("<html><body>");
-        Connection db = null;
+        Connection db;
         try
-        //Prepared statement for å spørre i database
+        //statement for å spørre i database
         {
             db = DBUtils.getINSTANCE().getConnection();
             Statement stmt = db.createStatement();
