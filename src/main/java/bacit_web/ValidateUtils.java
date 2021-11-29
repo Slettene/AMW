@@ -15,14 +15,16 @@ public class ValidateUtils {
     public boolean validateLogin(String ansattID, String ansattTelefon) {
         Connection db;
         PreparedStatement ps;
+        ResultSet rs;
         try {
             db = DBUtils.getINSTANCE().getConnection();
             String query = "SELECT AnsattID, AnsattTelefon FROM Amv.Ansatt WHERE AnsattID = ? AND AnsattTelefon = ?";
-            ResultSet rs;
             ps = db.prepareStatement(query);
             ps.setString(1, ansattID);
             ps.setString(2, ansattTelefon);
             rs = ps.executeQuery();
+
+            //Validerer om brukernavn og passord stemmer overens
 
             rs.next();
             String dbAnsattID = rs.getString("AnsattID");

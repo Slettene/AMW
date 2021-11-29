@@ -15,7 +15,7 @@ import java.sql.SQLException;
 
 @WebServlet("/ServletAdminPage")
 public class ServletAdminPage extends HttpServlet {
-
+//Sjekker om session inneholder admin
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
@@ -26,6 +26,7 @@ public class ServletAdminPage extends HttpServlet {
 
         ValidateUtils v = new ValidateUtils();
 
+        //Kaller på metode fra ValidateUtils som validerer om bruker er admin
         if (v.validateAdmin(session) == true) {
             request.getRequestDispatcher("AdminPage.html").forward(request, response);
         } else {

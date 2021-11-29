@@ -1,7 +1,8 @@
 <?php
 function build_calendar($month, $year){
 
-
+//Forsøk på å implementere kalender i php
+//IKKE I BRUK
 
     $daysOfWeek = array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
     $firstDayOfMonth = mktime(0, 0, 0, $month, 1, $year);
